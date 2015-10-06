@@ -1,0 +1,10 @@
+<div>
+  ${{totalAssets}} in total assets
+</div>
+<ul>
+  {{#each customers as |bankCustomer index|}}
+    <li>{{customer-item customer=bankCustomer updateMoneyAction=(action 'onChildUpateMoney' index)}}</li>
+  {{/each}}
+</ul>
+
+{{yield}}
